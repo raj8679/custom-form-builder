@@ -122,16 +122,23 @@ const CategorizeRender = () => {
         setMatchedOptions((prevOptions) => [...prevOptions, option]);
     };
 
+    const handleSubmit = () => {
+
+    }
+
     return (
-        <DndProvider backend={HTML5Backend}>
-            <div className="container mx-auto mt-10">
-                <TopDiv options={categories} />
-                <div className="flex mt-4">
-                    <LeftDiv categories={options} />
-                    <RightDiv matchedOptions={matchedOptions} handleDropOption={handleDropOption} />
+        <>
+            <DndProvider backend={HTML5Backend}>
+                <div className="container mx-auto mt-10">
+                    <TopDiv options={categories} />
+                    <div className="flex mt-4">
+                        <LeftDiv categories={options} />
+                        <RightDiv matchedOptions={matchedOptions} handleDropOption={handleDropOption} />
+                    </div>
                 </div>
-            </div>
-        </DndProvider>
+            </DndProvider>
+            <button className='w-fit p-2 m-auto rounded-md text-white bg-slate-700' onClick={handleSubmit}>Submit</button>
+        </>
     );
 };
 
