@@ -24,7 +24,7 @@ const CategorizeBuilder = () => {
 
     const handlePreview = () => {
         setData(categories)
-        navigate("/categorizebuilder")
+        navigate("/categorizerender")
     }
     return (
         <>
@@ -51,7 +51,11 @@ const CategorizeBuilder = () => {
                 ))}
                 <button onClick={handleAddField} className='border-2 border-white rounded-md mt-5'>Add</button>
             </div>
-            <button className='w-fit p-2 m-auto rounded-md text-white bg-slate-700' onClick={handlePreview}>PREVIEW</button>
+            <div className="flex justify-center">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-5" onClick={handlePreview}>
+                    PREVIEW
+                </button>
+            </div>
         </>
     );
 };
